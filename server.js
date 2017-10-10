@@ -22,7 +22,7 @@ app.post('/', (req, res) => {
 });
 
 app.post('/avatar', avatarUpload, (req, res) => {
-  res.send();
+  res.send(req.file.filename);
 });
 
 app.get('/uploads/avatar/:file', (req, res) => {
